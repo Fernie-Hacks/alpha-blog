@@ -1,5 +1,5 @@
 # README
 
-###Alpha Blog 
+##Alpha Blog 
 
 My first application using Ruby on Rails.
