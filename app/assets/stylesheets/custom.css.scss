@@ -1,6 +1,12 @@
-$navbar-default-bg: #08088A;
+/*
+  This custom CSS SCSS File stores styles to all style sheets
+*/
 
+$navbar-default-bg: #5BC0DE;
 
+/*
+  Imports the bootstrap sprockets
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -20,4 +26,53 @@ $navbar-default-bg: #08088A;
 
 .center {
   text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('IMG_2963.JPG');
+  background-size: cover;
+  height: 550px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.btn-xlarge{
+  font-size: 1.7em;
+  /* background-color: black; */
+}
+
+footer {
+  margin-top: 45px;
+  paddingd-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+/* Style for the small element in footer.  */
+footer small {
+  float: left;
+}
+
+footer ul{
+  float: right;
+  list-style: none;
+}
+
+/*
+  Additional elements in list will be added to the left.
+  Separaton of list items by 15 px each.
+*/
+footer ul li {
+  float: left;
+  margin-left: 15px;
 }

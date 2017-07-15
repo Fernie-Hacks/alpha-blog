@@ -1,3 +1,7 @@
+<!-- This file is a wrapper file for all the views
+in the application. Anything in the body after 'yield'
+gets served to all views.-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,9 +13,14 @@
   </head>
 
   <body>
+    <!-- Renders the navigation 'navbar' partial -->
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
+
     <div class="container">
-    <%= yield %>
+      <%= yield %>
+    </div>
+    <!-- Renders Footer for all pages-->
+    <%= render 'layouts/footer' %>
   </body>
 </html>

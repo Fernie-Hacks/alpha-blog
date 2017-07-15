@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+#Protects from middle man attacks when safely downloading gems
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
@@ -12,8 +13,11 @@ gem 'rails', '~> 5.1.1'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-# Use SCSS for stylesheets
+
+#Bootstrap Sass Gem
 gem 'bootstrap-sass', '~> 3.3.6'
+
+# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
