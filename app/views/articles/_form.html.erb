@@ -1,11 +1,8 @@
-<% if @article.errors.any? %>
-<h2> The following errors prevented the article from getting created</h2>
-<ul>
-  <% @article.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-  <% end %>
-</ul>
-<% end %>
+<!--
+Renders the _errors partial which is in the ../shared folder
+Pass the definition of obj to the embedded ruby line of code. 
+-->
+<%= render 'shared/errors', obj: @article %>
 
 <!--
 Do not include form-horizontal here opposite to bootstrap example.
