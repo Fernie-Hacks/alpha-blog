@@ -1,17 +1,24 @@
+#ArticlesController is the Controller created from scratch
+#Active record invoked by 'rails generate migration create_articles'
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
 
+#Invokes the GET /articles
   def index
     @articles = Article.all
   end
 
+#Invokes the GET /articles/new
   def new
     @article = Article.new
   end
-  
+
+#Invokes the GET /articles/:id/edit
   def edit
   end
 
+#Invokes the POST /articles
+#Active Records accepts a constructor parameter either in hash or a block
   def create
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
@@ -19,9 +26,9 @@ class ArticlesController < ApplicationController
       flash[:notice] = "Article was successfully created"
       redirect_to article_path(@article)
     else
-      #Redirect back to form, failed to save article. 
+      #Redirect back to form, failed to save article.
       #Can use :new instead [syntax]
-      render 'new' 
+      render 'new'
     end
   end
 
@@ -40,7 +47,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article.destroy
     flash[:notice] = "Article was successfully deleted"
-    redirect_to articles_path    
+    redirect_to articles_path
   end
 
   private
