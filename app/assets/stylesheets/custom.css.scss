@@ -10,6 +10,7 @@ $navbar-default-bg: #5BC0DE;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+/* ID 'logo' is assigned to the navbar in '_navigation.html.erb' */
 #logo{
   float: left;
   font-size: 1.7em;
@@ -24,6 +25,7 @@ $navbar-default-bg: #5BC0DE;
   text-decoration:none;
 }
 
+/* Global class anything that uses "center" in class will be text-aligned. */
 .center {
   text-align: center;
 }
@@ -46,6 +48,17 @@ $navbar-default-bg: #5BC0DE;
   font-size: 1.7em;
   /* background-color: black; */
 }
+
+/* Styling for show article 'show.html.erb'*/
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
+}
+
 
 footer {
   margin-top: 45px;

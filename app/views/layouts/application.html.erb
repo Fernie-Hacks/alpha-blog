@@ -1,6 +1,5 @@
 <!-- This file is a wrapper file for all the views
-in the application. Anything in the body after 'yield'
-gets served to all views.-->
+in the application. Anything in the body gets served to all views.-->
 
 <!DOCTYPE html>
 <html>
@@ -17,6 +16,8 @@ gets served to all views.-->
     <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
 
+    <!-- How is adding the yield inside the container class modifying the style? -->
+    <!-- Container is a valid option for jumbotron and can be added when rendered-->
     <div class="container">
       <%= yield %>
     </div>
