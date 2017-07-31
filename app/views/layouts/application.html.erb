@@ -17,7 +17,8 @@ in the application. Anything in the body gets served to all views.-->
     <%= render 'layouts/messages' %>
 
     <!-- How is adding the yield inside the container class modifying the style? -->
-    <!-- Container is a valid option for jumbotron and can be added when rendered-->
+    <!-- Container is a class in bootstrap -->
+    <!-- It sets the 12 col grid system -->
     <div class="container">
       <%= yield %>
     </div>
