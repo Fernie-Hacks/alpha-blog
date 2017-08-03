@@ -17,6 +17,9 @@
 #git checkout branch_name
 # => Switches to 'branch_name'
 
+#git branch -d branch_name
+# => Deletes 'branch_name' works if merge has already occured otherwise use -D
+
 require_relative 'config/environment'
 
 run Rails.application
