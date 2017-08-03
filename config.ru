@@ -7,6 +7,15 @@
 #Runs migrations files that have not been run in production yet.
 #heroku run rake db:migrate
 
+#Git
+#git checkout -b "branch_name"
+# => Creates a new branch
+
+#git branch
+# => Shows all branches and puts * on active branch.
+
+#git checkout branch_name
+# => Switches to 'branch_name'
 
 require_relative 'config/environment'
 
