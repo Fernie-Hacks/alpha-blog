@@ -24,5 +24,6 @@ in the application. Anything in the body gets served to all views.-->
     </div>
     <!-- Renders Footer for all pages-->
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
   </body>
 </html>

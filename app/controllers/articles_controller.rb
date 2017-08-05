@@ -20,8 +20,10 @@ class ArticlesController < ApplicationController
 #Invokes the POST /articles
 #Active Records accepts a constructor parameter either in hash or a block
   def create
+    debugger
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
