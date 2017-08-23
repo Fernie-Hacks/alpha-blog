@@ -3,6 +3,8 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
 
+#Creating @article in controller passes the obj to the view
+
 #Invokes the GET /articles
   def index
     @articles = Article.all
