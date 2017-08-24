@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
 
 #Invokes the GET /articles
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
 #Invokes the GET /articles/new
@@ -22,7 +22,7 @@ class ArticlesController < ApplicationController
 #Invokes the POST /articles
 #Active Records accepts a constructor parameter either in hash or a block
   def create
-    debugger
+    #debugger
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
     @article.user = User.first
