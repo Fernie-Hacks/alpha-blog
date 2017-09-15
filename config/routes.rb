@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
 
+  #Routes for links that do not hit the database, just simulates states.
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
