@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  #Ensures that before the methods below the user has been set.
   before_action :set_user, only: [:edit, :update, :show]
   def index
     @users = User.paginate(page: params[:page], per_page: 5)

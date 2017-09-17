@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   #When methods are defined as helper_methods it allows views to use them.
-  helper_method :current, :logged_in?
+  helper_method :current_user, :logged_in?
 
   #Methods defined in application_controller can be accessed by all controllers.
   def current_user
