@@ -2,6 +2,9 @@
 #Active record invoked by 'rails generate migration create_articles'
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:edit, :update, :show, :destroy]
+  #Before_action work chronologically, require_user comes after article has been set.
+  before_action :require_user, except: [:index, :show]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
 #Creating @article in controller passes the obj to the view
 
@@ -61,6 +64,13 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :description)
+    end
+
+    def require_same_user
+      if @article.user != current_user
+        flash[:danger] = "You can only edit or delete articles created by you."
+        redirect_to root_path
+      end
     end
 
 end
