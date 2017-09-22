@@ -18,3 +18,6 @@ end
 # => 2)Create new migration file [PREFERED METHOD]
 # =>    'rails generate migration add_description_to_articles'
 # =>    Automatically created a new migration file with new timestamp
+
+#Make sure to run migration files to heroku after deployment.
+#heroku run rake db:migrate
