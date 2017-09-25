@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :articles
+  #Has_many association is dependent on having user if user is destroyed so are the articles.
+  has_many :articles, dependent: :destroy
   #Forces save action to convert email to all lowercase prior to commiting change in DB.
   before_save{ self.email = email.downcase }
   validates :username, presence: true,
